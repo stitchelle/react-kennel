@@ -5,11 +5,15 @@ import LocationCard from './location/LocationCard'
 import OwnerCard from './owner/OwnerCard'
 import EmployeeCard from './employee/EmployeeCard'
 import NavBar from './nav/NavBar'
+import ApplicationViews from './ApplicationViews'
 
 class Kennel extends Component {
   render() {
     return (
-      <NavBar />
+      <React.Fragment>
+        <NavBar />
+        <ApplicationViews />
+      </React.Fragment>
     );
   }
 }
