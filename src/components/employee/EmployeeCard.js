@@ -5,8 +5,10 @@ class EmployeeCard extends Component {
     return (
       <div className="card">
         <div className="card-content">
-          
-          <h3>Employee Name: <span className="card-employee"></span></h3>
+          <picture>
+            <img src={require('./perm_identity-24px.svg')} alt="My Dog" />
+          </picture>
+          <h3>Employee Name: <span className="card-employee">{this.props.employee.name}</span></h3>
           
         </div>
       </div>
