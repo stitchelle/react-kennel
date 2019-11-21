@@ -10,6 +10,7 @@ import AnimalDetail from './animal/AnimalDetail'
 
 
 
+
 class ApplicationViews extends Component {
 
   render() {
