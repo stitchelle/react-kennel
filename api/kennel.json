@@ -1,20 +1,51 @@
 {
-    "animals": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Sheperd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
-    ],
-    "employees": [
-        { "id": 1, "name": "Devin"},
-        { "id": 2, "name": "Xander"},
-        { "id": 3, "name": "Robert"}
-    ],
-    "locations": [
-        { "id": 1, "name": "Stone River", "location": "Murfreesboro"},
-        { "id": 2, "name": "Opry Mills", "location": "Nashville"},
-        { "id": 3, "name": "Cool Springs", "location": "Brentwood"}
-    ],
-    "owners": [
-        { "id": 1, "name": "Michelle"}
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Sheperd"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Devin"
+    },
+    {
+      "id": 2,
+      "name": "Xander"
+    },
+    {
+      "id": 3,
+      "name": "Robert"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Stone River",
+      "location": "Murfreesboro"
+    },
+    {
+      "id": 2,
+      "name": "Opry Mills",
+      "location": "Nashville"
+    },
+    {
+      "id": 3,
+      "name": "Cool Springs",
+      "location": "Brentwood"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Michelle"
+    }
+  ]
 }
