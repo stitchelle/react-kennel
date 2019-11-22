@@ -7,6 +7,8 @@ import OwnerList from './owner/OwnerList'
 import AnimalList from './animal/AnimalList'
 import EmployeeList from './employee/EmployeeList'
 import AnimalDetail from './animal/AnimalDetail'
+import AnimalForm from './animal/AnimalForm'
+
 
 
 
@@ -19,9 +21,10 @@ class ApplicationViews extends Component {
         <Route exact path="/" render={(props) => {
           return <Home />
         }} />
-        {/* Make sure you add the `exact` attribute here */}
+        {//updated route: `/animals`}
         <Route exact path="/animals" render={(props) => {
-          return <AnimalList />
+          return <AnimalList {...props} />
+        }} />
         }} />
         <Route path="/animals/:animalId(\d+)" render={(props) => {
           // Pass the animalId to the AnimalDetailComponent
@@ -36,6 +39,13 @@ class ApplicationViews extends Component {
         matches only numbers after the final slash in the URL
         http://localhost:3000/animals/jack
         */}
+
+        {/* Our shiny new route.*/}
+        <Route path="/animals/new" render={(props) => {
+          return <AnimalForm {...props} />
+        }} />
+
+
         <Route path="/locations" render={(props) => {
           return <LocationList />
         }} />
