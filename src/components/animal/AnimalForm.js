@@ -46,8 +46,7 @@ class AnimalForm extends Component {
                         required
                         onChange={this.handleFieldChange}
                         id="animalName"
-                        placeholder="Animal name"
-                        />
+                        placeholder="Animal name"/>
                         <label htmlFor="animalName">Name</label>
                         <input
                         type="text"

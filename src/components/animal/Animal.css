@@ -45,4 +45,17 @@
   .card button:hover {
     background-color: darkblue;
   }
+
+  .btn {
+    background-color: cornflowerblue;
+    border: 2px outset darkblue;
+    color: white;
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .section-content {
+    text-align: center;
+    }
   

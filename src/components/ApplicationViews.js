@@ -21,14 +21,14 @@ class ApplicationViews extends Component {
         <Route exact path="/" render={(props) => {
           return <Home />
         }} />
-        {//updated route: `/animals`}
+        {/*updated route: `/animals`*/}
         <Route exact path="/animals" render={(props) => {
           return <AnimalList {...props} />
         }} />
-        }} />
+      
         <Route path="/animals/:animalId(\d+)" render={(props) => {
-          // Pass the animalId to the AnimalDetailComponent
-          return <AnimalDetail animalId={parseInt(props.match.params.animalId)} />
+          {/* Pass the animalId to the AnimalDetailComponent*/}
+          return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
         }} />
 
         {/*
