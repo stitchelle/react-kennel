@@ -13,13 +13,13 @@ export default {
     })
     .then(result => result.json())
   },
-  post(newLocation) {
-    return fetch(`${remoteURL}/locations`, {
+  post(newEmployee) {
+    return fetch(`${remoteURL}/employees`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(newLocation)
+        body: JSON.stringify(newEmployee)
     }).then(data => data.json())
 }
 }

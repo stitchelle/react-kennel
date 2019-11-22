@@ -22,31 +22,40 @@ class OwnerList extends Component {
 
     deleteOwner = id => {
         OwnerManager.delete(id)
-        .then(() => {
-          OwnerManager.getAll()
-          .then((newOwners) => {
-            this.setState({
-                owners: newOwners
+            .then(() => {
+                OwnerManager.getAll()
+                    .then((newOwners) => {
+                        this.setState({
+                            owners: newOwners
+                        })
+                    })
             })
-          })
-        })
-      }
+    }
 
-      render(){
+    render() {
         console.log("OwnerList: Render");
-      
-        return(
-          <div className="container-cards">
-            {this.state.owners.map(owner =>
-              <OwnerCard
-                key={owner.id}
-                owner={owner}
-                deleteOwner={this.deleteOwner}
-              />
-            )}
-          </div>
+
+        return (
+            <React.Fragment>
+                <section className="section-content">
+                    <button type="button"
+                        className="btn"
+                        onClick={() => { this.props.history.push("/owners/new") }}>
+                        New Owner
+                    </button>
+                </section>
+                <div className="container-cards">
+                    {this.state.owners.map(owner =>
+                        <OwnerCard
+                            key={owner.id}
+                            owner={owner}
+                            deleteOwner={this.deleteOwner}
+                        />
+                    )}
+                </div>
+            </React.Fragment>
         )
-      }
+    }
 }
 
 export default OwnerList

@@ -19,15 +19,18 @@
   "employees": [
     {
       "id": 1,
-      "name": "Devin"
+      "name": "Devin",
+      "location": "Murfreesboro"
     },
     {
       "id": 2,
-      "name": "Xander"
+      "name": "Xander",
+      "location": "Murfreesboro"
     },
     {
       "id": 3,
-      "name": "Robert"
+      "name": "Robert",
+      "location": "Murfreesboro"
     }
   ],
   "locations": [
@@ -50,7 +53,8 @@
   "owners": [
     {
       "id": 1,
-      "name": "Michelle"
+      "name": "Michelle",
+      "location": "Brentwood"
     }
   ]
 }

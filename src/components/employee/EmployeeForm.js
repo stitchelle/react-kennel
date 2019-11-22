@@ -5,6 +5,7 @@ import './EmployeeForm.css'
 class EmployeeForm extends Component {
     state = {
         employeeName: "",
+        location: "",
         loadingStatus: false,
     };
 
@@ -16,13 +17,13 @@ class EmployeeForm extends Component {
 
     constructNewEmployee = evt => {
         evt.preventDefault();
-        if (this.state.employeeName === "" || this.state.breed === "") {
-            window.alert("Please input an employee name and breed");
+        if (this.state.employeeName === "" || this.state.location === "") {
+            window.alert("Please input an employee name");
         } else {
             this.setState({ loadingStatus: true });
             const employee = {
                 name: this.state.employeeName,
-                breed: this.state.breed,
+                location: this.state.location
             };
 
             // Create the employee and redirect user to employee list
@@ -46,6 +47,14 @@ class EmployeeForm extends Component {
                         placeholder="Employee Name"
                         />
                         <label htmlFor="employeeName">Name</label>
+                        <input
+                        type="text"
+                        required
+                        onChange={this.handleFieldChange}
+                        id="location"
+                        placeholder="Location"
+                        />
+                        <label htmlFor="location">Location</label>
                     </div>
                     <div className="alignRight">
                         <button

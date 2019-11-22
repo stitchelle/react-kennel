@@ -9,6 +9,7 @@ class EmployeeCard extends Component {
             <img src={require('./perm_identity-24px.svg')} alt="employee" />
           </picture>
           <h3>Employee Name: <span className="card-employee">{this.props.employee.name}</span></h3>
+          <p>Location: {this.props.employee.location}</p>
           <button type="button" onClick={() => this.props.deleteEmployee(this.props.employee.id)}>Fire</button>
         </div>
       </div>
