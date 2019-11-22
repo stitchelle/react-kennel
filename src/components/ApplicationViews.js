@@ -7,9 +7,7 @@ import OwnerList from './owner/OwnerList'
 import AnimalList from './animal/AnimalList'
 import EmployeeList from './employee/EmployeeList'
 import AnimalDetail from './animal/AnimalDetail'
-
-
-
+import LocationDetail from './location/LocationDetail'
 
 class ApplicationViews extends Component {
 
@@ -36,8 +34,11 @@ class ApplicationViews extends Component {
         matches only numbers after the final slash in the URL
         http://localhost:3000/animals/jack
         */}
-        <Route path="/locations" render={(props) => {
+        <Route exact path="/locations" render={(props) => {
           return <LocationList />
+        }} />
+        <Route path="/locations/:locationId(\d+)" render={(props) => {
+          return <LocationDetail locationId={parseInt(props.match.params.locationId)} />
         }} />
         <Route path="/employees" render={(props) => {
           return <EmployeeList />
