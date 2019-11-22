@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import LocationManager from '../../modules/LocationManager';
-import './LocationForm.css'
+import OwnerManager from '../../modules/OwnerManager';
+import './OwnerForm.css'
 
-class LocationForm extends Component {
+class OwnerForm extends Component {
     state = {
-        locationName: "",
+        ownerName: "",
         location: "",
         loadingStatus: false,
     };
@@ -15,20 +15,20 @@ class LocationForm extends Component {
         this.setState(stateToChange);
     };
 
-    constructNewLocation = evt => {
+    constructNewOwner = evt => {
         evt.preventDefault();
-        if (this.state.locationName === "" || this.state.location === "") {
-            window.alert("Please input a location name and address");
+        if (this.state.ownerName === "" || this.state.location === "") {
+            window.alert("Please input Owner name and Location");
         } else {
             this.setState({ loadingStatus: true });
-            const location = {
-                name: this.state.locationName,
-                location: this.state.location,
+            const owner = {
+                name: this.state.ownerName,
+                breed: this.state.location,
             };
 
-            // Create the location and redirect user to location list
-            LocationManager.post(location)
-            .then(() => this.props.history.push("/locations"));
+            // Create the animal and redirect user to animal list
+            OwnerManager.post(owner)
+            .then(() => this.props.history.push("/owners"));
         }
     };
 
@@ -43,16 +43,16 @@ class LocationForm extends Component {
                         type="text"
                         required
                         onChange={this.handleFieldChange}
-                        id="locationName"
-                        placeholder="Name"
+                        id="ownerName"
+                        placeholder="Owner Name"
                         />
-                        <label htmlFor="locationName">Name</label>
+                        <label htmlFor="ownerName">Name</label>
                         <input
                         type="text"
                         required
                         onChange={this.handleFieldChange}
-                        id="breed"
-                        placeholder="Address"
+                        id="location"
+                        placeholder="Location"
                         />
                         <label htmlFor="location">Location</label>
                     </div>
@@ -60,7 +60,7 @@ class LocationForm extends Component {
                         <button
                         type="button"
                         disabled={this.state.loadingStatus}
-                        onClick={this.constructNewLocation}
+                        onClick={this.constructNewOwner}
                         >Submit</button>
                     </div>
                 </fieldset>
@@ -70,4 +70,4 @@ class LocationForm extends Component {
     }
 }
 
-export default LocationForm
+export default OwnerForm

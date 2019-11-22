@@ -13,13 +13,14 @@ export default {
     })
     .then(result => result.json())
   },
-  post(newLocation) {
-    return fetch(`${remoteURL}/locations`, {
+  post(newOwner) {
+    return fetch(`${remoteURL}/owners`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(newLocation)
+        body: JSON.stringify(newOwner)
     }).then(data => data.json())
-}
+  }
+
 }

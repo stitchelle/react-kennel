@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import LocationManager from '../../modules/LocationManager';
-import './LocationForm.css'
+import EmployeeManager from '../../modules/EmployeeManager';
+import './EmployeeForm.css'
 
-class LocationForm extends Component {
+class EmployeeForm extends Component {
     state = {
-        locationName: "",
+        employeeName: "",
         location: "",
         loadingStatus: false,
     };
@@ -15,20 +15,20 @@ class LocationForm extends Component {
         this.setState(stateToChange);
     };
 
-    constructNewLocation = evt => {
+    constructNewEmployee = evt => {
         evt.preventDefault();
-        if (this.state.locationName === "" || this.state.location === "") {
-            window.alert("Please input a location name and address");
+        if (this.state.employeeName === "" || this.state.location === "") {
+            window.alert("Please input an employee name");
         } else {
             this.setState({ loadingStatus: true });
-            const location = {
-                name: this.state.locationName,
-                location: this.state.location,
+            const employee = {
+                name: this.state.employeeName,
+                location: this.state.location
             };
 
-            // Create the location and redirect user to location list
-            LocationManager.post(location)
-            .then(() => this.props.history.push("/locations"));
+            // Create the employee and redirect user to employee list
+            EmployeeManager.post(employee)
+            .then(() => this.props.history.push("/employees"));
         }
     };
 
@@ -43,16 +43,16 @@ class LocationForm extends Component {
                         type="text"
                         required
                         onChange={this.handleFieldChange}
-                        id="locationName"
-                        placeholder="Name"
+                        id="employeeName"
+                        placeholder="Employee Name"
                         />
-                        <label htmlFor="locationName">Name</label>
+                        <label htmlFor="employeeName">Name</label>
                         <input
                         type="text"
                         required
                         onChange={this.handleFieldChange}
-                        id="breed"
-                        placeholder="Address"
+                        id="location"
+                        placeholder="Location"
                         />
                         <label htmlFor="location">Location</label>
                     </div>
@@ -60,7 +60,7 @@ class LocationForm extends Component {
                         <button
                         type="button"
                         disabled={this.state.loadingStatus}
-                        onClick={this.constructNewLocation}
+                        onClick={this.constructNewEmployee}
                         >Submit</button>
                     </div>
                 </fieldset>
@@ -70,4 +70,4 @@ class LocationForm extends Component {
     }
 }
 
-export default LocationForm
+export default EmployeeForm
