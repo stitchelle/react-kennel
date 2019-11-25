@@ -51,7 +51,7 @@ class LocationForm extends Component {
                         type="text"
                         required
                         onChange={this.handleFieldChange}
-                        id="breed"
+                        id="location"
                         placeholder="Address"
                         />
                         <label htmlFor="location">Location</label>

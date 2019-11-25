@@ -18,6 +18,8 @@ import OwnerForm from './owner/OwnerForm'
 
 
 import AnimalEditForm from './animal/AnimalEditForm'
+import LocationEditForm from './location/LocationEditForm'
+
 
 
 
@@ -43,7 +45,6 @@ class ApplicationViews extends Component {
         }} />
 
         <Route path="/animals/:animalId(\d+)" render={(props) => {
-          {/* Pass the animalId to the AnimalDetailComponent*/ }
           return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
         }} />
 
@@ -79,11 +80,16 @@ class ApplicationViews extends Component {
             return <Redirect to="/login" />
           }
         }} />
-        <Route path="/locations/:locationId(\d+)" render={(props) => {
-          return <LocationDetail locationId={parseInt(props.match.params.locationId)} {...props} />
-        }} />
         <Route path="/locations/new" render={(props) => {
           return <LocationForm {...props} />
+        }} />
+        <Route
+          path="/locations/:locationId(\d+)/edit" render={props => {
+            return <LocationEditForm {...props} />
+          }}
+        />
+        <Route exact path="/locations/:locationId(\d+)" render={(props) => {
+          return <LocationDetail locationId={parseInt(props.match.params.locationId)} {...props} />
         }} />
 
         <Route exact path="/employees" render={(props) => {

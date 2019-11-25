@@ -14,6 +14,11 @@
       "id": 3,
       "name": "Esme",
       "breed": "Pitbull"
+    },
+    {
+      "name": "Takai",
+      "breed": "Shiba Inu / Corgi",
+      "id": 4
     }
   ],
   "employees": [
@@ -31,6 +36,11 @@
       "id": 3,
       "name": "Robert",
       "location": "Murfreesboro"
+    },
+    {
+      "name": "Lauren",
+      "location": "White House",
+      "id": 4
     }
   ],
   "locations": [
@@ -55,6 +65,11 @@
       "id": 1,
       "name": "Michelle",
       "location": "Brentwood"
+    },
+    {
+      "name": "Robert",
+      "breed": "Murfreesboro",
+      "id": 2
     }
   ]
 }
