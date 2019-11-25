@@ -47,13 +47,13 @@ class LocationEditForm extends Component {
           <fieldset>
             <div className="formgrid">
               <input type="text" required className="form-control" onChange={this.handleFieldChange} id="locationName" value={this.state.locationName}/>
-              <label htmlFor="locationName">Location name</label>
+              <label htmlFor="locationName">Location Name</label>
 
               <input type="text" required className="form-control" onChange={this.handleFieldChange} id="location" value={this.state.location}/>
               <label htmlFor="location">Location</label>
             </div>
             <div className="alignRight">
-              <button type="button" disabled={this.state.loadingStatus} onClick={this.updateExistingAnimal}className="btn btn-primary"
+              <button type="button" disabled={this.state.loadingStatus} onClick={this.updateExistingLocation}className="btn btn-primary"
               >Submit</button>
             </div>
           </fieldset>

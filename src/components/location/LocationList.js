@@ -39,9 +39,7 @@ class LocationList extends Component {
         return (
             <React.Fragment>
                 <section className="section-content">
-                    <button type="button"
-                        className="btn"
-                        onClick={() => { this.props.history.push("/locations/new") }}>
+                    <button type="button" className="btn" onClick={() => { this.props.history.push("/locations/new") }}>
                         New Location
                     </button>
                 </section>

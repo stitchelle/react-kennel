@@ -8,7 +8,7 @@
     {
       "id": 2,
       "name": "Decker",
-      "breed": "German Sheperd"
+      "breed": "German Sheperd "
     },
     {
       "id": 3,
@@ -52,7 +52,7 @@
     {
       "id": 2,
       "name": "Opry Mills",
-      "location": "Nashville"
+      "location": "Nashville "
     },
     {
       "id": 3,
