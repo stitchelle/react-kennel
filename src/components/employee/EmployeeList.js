@@ -51,6 +51,7 @@ class EmployeeList extends Component {
               key={employee.id}
               employee={employee}
               deleteEmployee={this.deleteEmployee}
+              {...this.props}
             />
           )}
         </div>
