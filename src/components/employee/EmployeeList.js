@@ -39,9 +39,7 @@ class EmployeeList extends Component {
     return (
       <React.Fragment>
         <section className="section-content">
-          <button type="button"
-            className="btn"
-            onClick={() => { this.props.history.push("/employees/new") }}>
+          <button type="button" className="btn" onClick={() => { this.props.history.push("/employees/new") }}>
             New Employee
           </button>
         </section>
