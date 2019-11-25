@@ -10,7 +10,7 @@ import EmployeeList from './employee/EmployeeList'
 
 import AnimalDetail from './animal/AnimalDetail'
 import LocationDetail from './location/LocationDetail'
-import EmployeeDetail from './employee/EmployeeDetail'
+// import EmployeeDetail from './employee/EmployeeDetail'
 
 
 import AnimalForm from './animal/AnimalForm'
@@ -104,9 +104,9 @@ class ApplicationViews extends Component {
             return <EmployeeEditForm {...props} />
           }}
         />
-        <Route exact path="/employees/:employeeId(\d+)" render={(props) => {
+        {/* <Route exact path="/employees/:employeeId(\d+)" render={(props) => {
           return <EmployeeDetail employeeId={parseInt(props.match.params.employeeId)} {...props} />
-        }} />
+        }} /> */}
 
         <Route exact path="/owners" render={(props) => {
           if (this.isAuthenticated()) {
