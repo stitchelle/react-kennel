@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import AnimalManager from "../../modules/AnimalManager"
 import "./AnimalForm.css"
-import EmployeeManager from '../../modules/EmployeeManager'
 
 class AnimalEditForm extends Component {
   //set the initial state
