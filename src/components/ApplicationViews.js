@@ -25,19 +25,19 @@ import LocationEditForm from './location/LocationEditForm'
 
 
 class ApplicationViews extends Component {
-  isAuthenticated = () => localStorage.getItem("credentials") !== null
-
   render() {
     return (
       <React.Fragment>
-        <Route path="/login" component={Login} />
+        <Route path="/login" render={props => {
+          return <Login setUser={this.props.setUser} {...props} />
+        }} />
 
         <Route exact path="/" render={(props) => {
           return <Home />
         }} />
         {/*updated route: `/animals`*/}
         <Route exact path="/animals" render={props => {
-          if (this.isAuthenticated()) {
+          if (this.props.user) {
             return <AnimalList {...props} />
           } else {
             return <Redirect to="/login" />
@@ -74,12 +74,13 @@ class ApplicationViews extends Component {
 
 
         <Route exact path="/locations" render={(props) => {
-          if (this.isAuthenticated()) {
+          if (this.props.user) {
             return <LocationList {...props} />
           } else {
             return <Redirect to="/login" />
           }
         }} />
+
         <Route path="/locations/new" render={(props) => {
           return <LocationForm {...props} />
         }} />
@@ -93,23 +94,17 @@ class ApplicationViews extends Component {
         }} />
 
         <Route exact path="/employees" render={(props) => {
-          if (this.isAuthenticated()) {
             return <EmployeeList {...props} />
-          } else {
-            return <Redirect to="/login" />
           }
-        }} />
+        } />
         <Route path="/employees/new" render={(props) => {
           return <EmployeeForm {...props} />
         }} />
 
         <Route exact path="/owners" render={(props) => {
-          if (this.isAuthenticated()) {
             return <OwnerList {...props} />
-          } else {
-            return <Redirect to="/login" />
           }
-        }} />
+        } />
         <Route path="/owners/new" render={(props) => {
           return <OwnerForm {...props} />
         }} />
