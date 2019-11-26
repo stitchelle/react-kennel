@@ -7,12 +7,6 @@
       "employeeId": 3
     },
     {
-      "id": 3,
-      "name": "Esme",
-      "breed": "Pitbull",
-      "employeeId": 1
-    },
-    {
       "name": "Jack",
       "breed": "Big cat",
       "id": 4,
@@ -37,7 +31,13 @@
     },
     {
       "id": 3,
-      "name": "Robert Johnson"
+      "name": "Robert",
+      "location": "Murfreesboro"
+    },
+    {
+      "name": "Lauren",
+      "location": "White House",
+      "id": 4
     }
   ],
   "locations": [
@@ -49,7 +49,7 @@
     {
       "id": 2,
       "name": "Opry Mills",
-      "location": "Nashville"
+      "location": "Nashville "
     },
     {
       "id": 3,
@@ -62,6 +62,11 @@
       "id": 1,
       "name": "Michelle",
       "location": "Brentwood"
+    },
+    {
+      "name": "Robert",
+      "breed": "Murfreesboro",
+      "id": 2
     }
   ]
 }
